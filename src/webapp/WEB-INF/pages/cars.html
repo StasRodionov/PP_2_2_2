@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<h1>Table cars</h1>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>id</th>
+        <th>model</th>
+        <th>year</th>
+    </tr>
+
+    <tr th:each="car : ${cars}">
+        <td th:utext="${car.id}">id</td>
+        <td th:utext="${car.model}">model</td>
+        <td th:utext="${car.year}">year</td>
+    </tr>
+
+</table>
+
+</body>
+</html>
